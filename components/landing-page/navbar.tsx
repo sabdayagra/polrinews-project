@@ -55,10 +55,10 @@ const Navbar = () => {
           {/* Ikon Sosmed */}
           <div className="flex flex-row gap-3 items-center">
             <Image src="/assets/icon/fb.png" alt="facebook" width={1920} height={1080} className="w-[12px] h-[15px]" />
-            <Image src="/assets/icon/twitter.png" alt="twitter" width={1920} height={1080} className="w-[12px] h-[15px]" />
-            <Image src="/assets/icon/ig.png" alt="instagram" width={1920} height={1080} className="w-[12px] h-[15px]" />
+            <Image src="/assets/icon/twitter.png" alt="twitter" width={1920} height={1080} className="w-[14px] h-[15px]" />
+            <Image src="/assets/icon/ig.png" alt="instagram" width={1920} height={1080} className="w-[13px] h-[15px]" />
             <Image src="/assets/icon/yt.png" alt="youtube" width={1920} height={1080} className="w-[20px] h-[15px]" />
-            <Image src="/assets/icon/vk.png" alt="vk" width={1920} height={1080} className="w-[14px] h-[15px]" />
+            <Image src="/assets/icon/vk.png" alt="vk" width={1920} height={1080} className="w-[16px] h-[15px]" />
           </div>
           {/* Login */}
           <div className="flex items-center self-end gap-2">

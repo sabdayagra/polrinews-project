@@ -1,6 +1,6 @@
-// components/HeroSection.tsx
-
+"use client";
 import Image from "next/image";
+import { Reveal } from "../ui/Reveal";
 
 const heroArticles = [
   {
@@ -38,46 +38,51 @@ const heroArticles = [
 
 export default function HeroSection() {
   return (
-    <div className="w-full lg:w-[75%] mx-auto px-4 lg:px-0">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
-        {/* Artikel utama */}
-        <div className="relative h-[250px] lg:h-[450px] col-span-1 lg:col-span-2">
-          {/* Gambar utama */}
-          <Image src={heroArticles[0].img} alt={heroArticles[0].title} fill className="object-cover rounded-md" />
+    <>
+      <Reveal>
+        {" "}
+        <div className="w-full lg:w-[75%] mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
+            {/* Artikel utama */}
+            <div className="relative h-[250px] lg:h-[450px] col-span-1 lg:col-span-2">
+              {/* Gambar utama */}
+              <Image src={heroArticles[0].img} alt={heroArticles[0].title} fill className="object-cover rounded-md" />
 
-          {/* Overlay transparan */}
-          <div className="absolute inset-0 bg-black/50 rounded-md" />
+              {/* Overlay transparan */}
+              <div className="absolute inset-0 bg-black/50 rounded-md" />
 
-          {/* Konten caption */}
-          <div className="absolute bottom-0 p-6 text-white z-10">
-            <span className="relative text-white text-xs font-bold pl-2 pr-4 py-0.5 mb-1 w-fit inline-block bg-[#ce3b28] clip-trapezoid">{heroArticles[0].category}</span>
-            <h2 className="text-xl lg:text-2xl font-semibold mt-2 leading-tight">{heroArticles[0].title}</h2>
-            <div className="text-sm text-gray-300 mt-2">
-              {heroArticles[0].author} &nbsp; ● &nbsp; {heroArticles[0].date}
+              {/* Konten caption */}
+              <div className="absolute bottom-0 p-6 text-white z-10">
+                <span className="relative text-white text-xs font-bold pl-2 pr-4 py-0.5 mb-1 w-fit inline-block bg-[#ce3b28] clip-trapezoid">{heroArticles[0].category}</span>
+                <h2 className="text-xl lg:text-2xl font-semibold mt-2 leading-tight">{heroArticles[0].title}</h2>
+                <div className="text-sm text-gray-300 mt-2">
+                  {heroArticles[0].author} &nbsp; ● &nbsp; {heroArticles[0].date}
+                </div>
+              </div>
+            </div>
+
+            {/* Artikel kecil */}
+            <div className="grid  grid-cols-2 gap-2">
+              {heroArticles.slice(1, 5).map((article, idx) => (
+                <div key={idx} className="relative h-[220px] rounded overflow-hidden">
+                  {/* Gambar */}
+                  <Image src={article.img} alt={article.title} fill className="object-cover" />
+
+                  {/* Overlay transparan */}
+                  <div className="absolute inset-0 bg-black/50" />
+
+                  {/* Konten Artikel */}
+                  <div className="absolute inset-0 p-2 flex flex-col justify-end text-white z-10">
+                    <span className="relative text-white text-xs font-bold pl-2 pr-4 py-0.5 mb-1 w-fit inline-block bg-[#ce3b28] clip-trapezoid">{article.category}</span>
+                    <p className="text-xs lg:text-[19px] font-semibold leading-tight line-clamp-6">{article.title}</p>
+                    <span className="text-[10px] text-gray-300 mt-1">{article.date}</span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-
-        {/* Artikel kecil */}
-        <div className="grid lg:grid-cols-1 grid-cols-2 gap-2">
-          {heroArticles.slice(1, 5).map((article, idx) => (
-            <div key={idx} className="relative h-[220px] rounded overflow-hidden">
-              {/* Gambar */}
-              <Image src={article.img} alt={article.title} fill className="object-cover" />
-
-              {/* Overlay transparan */}
-              <div className="absolute inset-0 bg-black/50" />
-
-              {/* Konten Artikel */}
-              <div className="absolute inset-0 p-2 flex flex-col justify-end text-white z-10">
-                <span className="relative text-white text-xs font-bold pl-2 pr-4 py-0.5 mb-1 w-fit inline-block bg-[#ce3b28] clip-trapezoid">{article.category}</span>
-                <p className="text-xs lg:text-[19px] font-semibold leading-tight line-clamp-6">{article.title}</p>
-                <span className="text-[10px] text-gray-300 mt-1">{article.date}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+      </Reveal>
+    </>
   );
 }
