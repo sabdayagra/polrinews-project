@@ -37,7 +37,7 @@ const articles = [
 
 export default function ArticleList() {
   return (
-    <div className="w-[75%] mx-auto flex flex-col lg:flex-row my-5">
+    <div className="w-full px-4 lg:px-0 lg:w-[75%] mx-auto flex flex-col lg:flex-row my-5">
       {/* Left */}
       <div className="space-y-6 w-full lg:w-[70%] mt-2">
         <div className="flex flex-col">
@@ -54,10 +54,10 @@ export default function ArticleList() {
 
             {/* Konten */}
             <div className="flex flex-col justify-between">
-              <h2 className="text-[22px] font-bold text-black hover:underline cursor-pointer">{article.title}</h2>
-              <div className="flex items-center text-[12px] text-gray-500 mt-1 gap-2">
+              <h2 className="text-[12px] lg:text-[22px] font-bold text-black hover:underline cursor-pointer">{article.title}</h2>
+              <div className="flex items-center text-[8px] lg:text-[12px] text-gray-500 mt-1 gap-2">
                 BY
-                <span className="text-red-600 font-bold text-[12px]">REDAKSI POLRINEWS</span>
+                <span className="text-red-600 font-bold text-[8px] lg:text-[12px]">REDAKSI POLRINEWS</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
                   <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
                     <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0-18 0" />
@@ -77,21 +77,21 @@ export default function ArticleList() {
                 </svg>
                 <span>0</span>
               </div>
-              <p className="text-[14px] text-gray-600 mt-2 line-clamp-4">{article.description}</p>
+              <p className="text-[10px] lg:text-[14px] text-gray-600 mt-2 line-clamp-4">{article.description}</p>
             </div>
           </div>
         ))}
 
         {/* Pagination */}
-        <div className="flex gap-2 mt-4">
-          <button className="text-sm px-3 py-1 border rounded hover:bg-gray-100">&lt; PREV</button>
-          <button className="text-sm px-3 py-1 border rounded hover:bg-gray-100">NEXT &gt;</button>
+        <div className="flex gap-2 my-4">
+          <button className="text-xs lg:text-sm px-1.5 lg:px-3 py-1 border rounded hover:bg-gray-100">&lt; PREV</button>
+          <button className="text-xs lg:text-sm px-1.5 lg:px-3 py-1 border rounded hover:bg-gray-100">NEXT &gt;</button>
         </div>
       </div>
 
       {/* Right */}
       <div className="flex flex-col gap-4 w-full lg:w-[30%]">
-        <div className="border rounded-lg w-full max-w-xs mx-auto p-4 bg-white shadow-sm">
+        <div className="border rounded-lg w-full max-w-full lg:max-w-xs mx-auto p-4 bg-white shadow-sm">
           {/* Header */}
           <div className="border-b pb-2 text-sm text-gray-700 font-medium">
             Postingan dari <span className="font-semibold">@Polri_News</span>
@@ -113,7 +113,8 @@ export default function ArticleList() {
           </div>
         </div>
 
-        <div className="relative border rounded-lg w-full h-full lg:h-[300px] max-w-xs mx-auto bg-white p-6 shadow-sm text-center">
+        {/* PPS */}
+        <div className="relative border rounded-lg w-full h-full lg:h-[300px] max-w-full lg:max-w-xs mx-auto bg-white p-6 shadow-sm text-center">
           {/* Tombol Close */}
           <button className="absolute top-2 right-2 text-xs text-blue-500 hover:text-blue-700">✕</button>
 
@@ -124,7 +125,7 @@ export default function ArticleList() {
             </h2>
           </div>
         </div>
-        <div className="relative border rounded-lg w-full h-full lg:h-[300px] max-w-xs mx-auto bg-white p-6 shadow-sm text-center">
+        <div className="relative border rounded-lg w-full h-full lg:h-[300px] max-w-full lg:max-w-xs mx-auto bg-white p-6 shadow-sm text-center">
           {/* Tombol Close */}
           <button className="absolute top-2 right-2 text-xs text-blue-500 hover:text-blue-700">✕</button>
 

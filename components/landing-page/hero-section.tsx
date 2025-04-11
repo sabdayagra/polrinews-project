@@ -38,7 +38,7 @@ const heroArticles = [
 
 export default function HeroSection() {
   return (
-    <div className="w-[75%] mx-auto">
+    <div className="w-full lg:w-[75%] mx-auto px-4 lg:px-0">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
         {/* Artikel utama */}
         <div className="relative h-[250px] lg:h-[450px] col-span-1 lg:col-span-2">
@@ -59,7 +59,7 @@ export default function HeroSection() {
         </div>
 
         {/* Artikel kecil */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <div className="grid lg:grid-cols-1 grid-cols-2 gap-2">
           {heroArticles.slice(1, 5).map((article, idx) => (
             <div key={idx} className="relative h-[220px] rounded overflow-hidden">
               {/* Gambar */}

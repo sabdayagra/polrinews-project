@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#b83422] text-white text-sm w-[75%] mx-auto">
+    <footer className="bg-[#b83422] text-white text-sm w-full lg:w-[75%] mx-auto">
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Bagian atas: Navigasi */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-red-700 pb-4">

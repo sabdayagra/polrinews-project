@@ -72,7 +72,7 @@ export default function YouTubeSection() {
   const [currentPage, setCurrentPage] = useState(1);
 
   return (
-    <section className="py-6 w-full lg:w-[75%] mx-auto">
+    <section className="py-6 w-full lg:w-[75%] mx-auto px-4 lg:px-0">
       {/* Section Header */}
       <div className="mb-4">
         <h2 className="text-[18px] font-semibold">
