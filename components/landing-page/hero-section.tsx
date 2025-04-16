@@ -41,15 +41,15 @@ export default function HeroSection() {
     <>
       <Reveal>
         {" "}
-        <div className="w-full lg:w-[75%] mx-auto px-4">
+        <div className="w-full lg:w-[75%] mx-auto px-4 lg:px-0">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
             {/* Artikel utama */}
             <div className="relative h-[250px] lg:h-[450px] col-span-1 lg:col-span-2">
               {/* Gambar utama */}
-              <Image src={heroArticles[0].img} alt={heroArticles[0].title} fill className="object-cover rounded-md" />
+              <Image src={heroArticles[0].img} alt={heroArticles[0].title} fill className="object-cover " />
 
               {/* Overlay transparan */}
-              <div className="absolute inset-0 bg-black/50 rounded-md" />
+              <div className="absolute inset-0 bg-black/50" />
 
               {/* Konten caption */}
               <div className="absolute bottom-0 p-6 text-white z-10">
@@ -64,7 +64,7 @@ export default function HeroSection() {
             {/* Artikel kecil */}
             <div className="grid  grid-cols-2 gap-2">
               {heroArticles.slice(1, 5).map((article, idx) => (
-                <div key={idx} className="relative h-[220px] rounded overflow-hidden">
+                <div key={idx} className="relative h-[220px] overflow-hidden">
                   {/* Gambar */}
                   <Image src={article.img} alt={article.title} fill className="object-cover" />
 

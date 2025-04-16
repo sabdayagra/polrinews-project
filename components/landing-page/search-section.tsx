@@ -18,7 +18,7 @@ export default function SearchSection() {
   return (
     <div className="w-full lg:w-[75%] mx-auto">
       <div className="flex flex-col lg:flex-row w-full justify-between items-center bg-[#ce3b28] px-4 lg:px-8 py-2">
-        <div className="grid grid-cols-2 gap-3 sm:flex sm:gap-4 lg:gap-24 sm:justify-end">
+        <div className="grid grid-cols-2 gap-3 sm:flex sm:gap-4 lg:gap-16 sm:justify-end">
           {navItems.map((item) => (
             <Link key={item.href} href={item.href}>
               <span className={`text-white text-sm font-semibold relative pb-1 ${pathname === item.href ? "after:content-[''] after:absolute after:-bottom-0.5 after:left-0 after:w-full after:h-[2px] after:bg-white" : ""}`}>
@@ -28,7 +28,7 @@ export default function SearchSection() {
           ))}
         </div>
 
-        <button className="text-white text-sm mt-3 lg:mt-0 lg:block hidden">
+        <button className="text-white text-sm mt-3 lg:mt-0 lg:flex hidden">
           <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
             <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314" />
           </svg>

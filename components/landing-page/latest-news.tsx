@@ -94,7 +94,7 @@ export default function ArticleList() {
 
           {/* Right */}
           <div className="flex flex-col gap-4 w-full lg:w-[30%]">
-            <div className="border rounded-lg w-full max-w-full lg:max-w-xs mx-auto p-4 bg-white shadow-sm">
+            <div className="border rounded-lg w-full max-w-full ml-0 lg:ml-6 mx-auto p-4 bg-white shadow-sm">
               {/* Header */}
               <div className="border-b pb-2 text-sm text-gray-700 font-medium">
                 Postingan dari <span className="font-semibold">@Polri_News</span>
@@ -117,7 +117,7 @@ export default function ArticleList() {
             </div>
 
             {/* PPS */}
-            <div className="relative border rounded-lg w-full h-full lg:h-[300px] max-w-full lg:max-w-xs mx-auto bg-white p-6 shadow-sm text-center">
+            <div className="relative border rounded-lg w-full h-[300px] max-w-full mx-auto bg-white ml-0 lg:ml-6 shadow-sm text-center">
               {/* Tombol Close */}
               <button className="absolute top-2 right-2 text-xs text-blue-500 hover:text-blue-700">✕</button>
 
@@ -128,7 +128,7 @@ export default function ArticleList() {
                 </h2>
               </div>
             </div>
-            <div className="relative border rounded-lg w-full h-full lg:h-[300px] max-w-full lg:max-w-xs mx-auto bg-white p-6 shadow-sm text-center">
+            <div className="relative border rounded-lg w-full h-[300px] max-w-full  mx-auto bg-white ml-0 lg:ml-6 shadow-sm text-center">
               {/* Tombol Close */}
               <button className="absolute top-2 right-2 text-xs text-blue-500 hover:text-blue-700">✕</button>
 
